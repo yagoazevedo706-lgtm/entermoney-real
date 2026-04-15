@@ -1,5 +1,5 @@
-estado = "andando"
-tempo_sprite_ataque = 0;
+estado = "parado"
+tempo_sprite_ataque = 0
 // --- MANTENHA SEUS INPUTS E VARIÁVEIS NO CREATE ---
 v_x = 0; 
 tempo_dano = 0;
@@ -69,10 +69,95 @@ pode_pular = false
 // Configurações do Dash
 dash_speed = 18;
 dash_duration = 20;    // QUANTOS FRAMES o dash vai durar (ex: 20 frames = 1/3 de segundo)
-dash_timer = 0;        // O contador que vai diminuir
+dash_timer = dash_duration;        // O contador que vai diminuir
 dash_friction = 0.8; // O quanto de velocidade perde por frame
 
 // Configurações de Ataque
+#region Ataque
+inst_create = true
 
+//fraco
+atk_fraco_tempo = 5
+atk_fraco_timer = atk_fraco_tempo
 
+atk_fraco_impulse = 5
+
+atk_fraco_dano = 5
+
+//forte
+atk_forte_tempo = 10
+atk_forte_timer = atk_forte_tempo
+
+atk_forte_impulse = 5
+
+atk_forte_dano = 9
+
+#endregion
+
+#region Combo
+
+input_window_time = 10 //tempo em segundos do espaço de tempo que tenho pra apertar cada tecla
+input_window_timer = input_window_time
+
+input_sequence = ""
+input_max = 6
+
+combo_timer = 0
+
+combo_jump = true
+
+#region combo1 (FFFT)
+
+combo1_time = 20 //tempo q fica no ocmbo até voltar (em ticks)
+combo1_inst = -1
+
+combo1_col = false
+
+combo1_dano = true
+
+ombo1_enemy = -1
+
+combo1_create = true
+
+#endregion
+
+#region combo2 (FFT)
+
+combo2_time = 20 //tempo q fica no ocmbo
+combo2_dano = 8
+
+combo2_inst = -1
+combo2_enemy = -1
+
+combo2_col = false
+
+combo2_impulse = 10
+
+combo2_create = true
+
+#endregion
+
+#region combo3 (FT)
+
+combo3_time = 20
+combo3_dano = 7
+
+#endregion
+
+#endregion
+
+#region Rasteira
+
+slide_speed_target = 15
+slide_speed = 0
+
+slide_duration = 20
+slide_timer = slide_duration
+
+slide_acc = 0.5
+slide_dcc = 0.5
+
+#endregion
+
+bin_dir = 1 //direção do player, 1 = direita, -1 = esquerda
 
