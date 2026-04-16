@@ -14,7 +14,9 @@ if (instance_exists(meu_corpo)) {
     } else {
         meu_corpo.sprite_index = spr_hitbox;
     }
-}if(ataque and pode_atacar){
+}
+/*
+if(ataque and pode_atacar){
 	pode_atacar = false
 	alarm[1] = game_get_speed(gamespeed_fps) * 0.1
 	sprite_index = spr_protagonista_atacando;
@@ -98,5 +100,5 @@ if (instance_exists(meu_corpo)) {
 			}
 		}
 	}
-
+*/
 // LÓGICA PARA SEGUIR (ATUALIZADA)
